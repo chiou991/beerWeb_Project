@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body{
+    background-image: url("../images/index/bg1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 12px;
+    color: #B15C5C;
+}
+@media screen and (min-width: 768px) {
+    body{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body{
+        font-size: 20px;
+    }
+}
+img{
+    vertical-align: bottom;
+}
+button{
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.text-center{
+    text-align: center;
+}
+
+/* 內容固定寬 */
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .container{
+        max-width: 720px;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+}
+
+/* header start */
+.header{
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* search pad pc */
+.search{
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .search{
+        margin-top: 10px;
+        display: flex;
+        text-align: center;
+        height: 20px;
+    }
+}
+
+.search input{
+    padding: 4.5px 4px;
+    border: none;
+    
+}
+.search button{
+    text-align: center;
+    padding-bottom: 6px;
+}
+.search button i{
+    font-size: 12px;
+}
+
+.searchLanguage{
+    margin-left: 35.4px;
+    color: white;
+    display: flex;
+    width: 100%;
+    z-index: 50;
+}
+.searchLanguage > li{
+    margin-right: 18px;
+    position: relative;
+}
+.searchLanguage > li > ul{
+    position: absolute;
+    left: -70px;
+    width: max-content;
+    display: flex; 
+    background-color: #B15C5C;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.searchLanguage > li > ul > li a{
+    margin: 10px;
+}
+.searchLanguage > li > ul > li a{
+    color: #ffffff;
+}
+
+/* logo */
+.logo{
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+    margin-left: 21.5px;
+    margin-bottom: 5px;
+}
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-top: 6.5px;
+        margin-left: 18px;
+        margin-bottom: 8px;
+        width: 53px;
+        height: 53px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo{
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        width: 85px;
+        height: 85px;
+    }
+}
+.logo img{
+    width: 100%;
+}
+
+/* pad pc nav start */
+.navPc{
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .navPc{
+       display: flex;
+       max-width: 720px;
+       width: 80%;
+       margin: 0px auto;
+       justify-content: space-around;
+       position: absolute;
+       top: 30px;
+       left: 80px;
+    }
+    .navPc img{
+        transform: scale(0.6);
+        align-items: center;
+        margin: 0 auto;
+    }
+    .iconhover{
+        transition-duration: 1s;
+    }
+    .navPc a{
+        position: relative;
+    }
+    .navPc a:hover img{
+        opacity: 0;
+    }
+    .navPc p{
+        display: none;
+        width: max-content;
+        position: absolute;
+        top: 10px;
+        text-align: center;
+        left: -15px;
+    }
+    .navPc a:hover p{
+        display: flex;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .navPc{
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1140px;
+        top: 55px;
+        left: 120px;
+    }
+    .navPc img{
+        transform: scale(1);
+    }
+}
+
+.nav-menu{
+    margin-top: 2px;
+    margin-right: 31px;
+    color: white;
+    font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+    .nav-menu{
+        position: absolute;
+        top: 35px;
+        right: 10px;
+        z-index: 5;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nav-menu{
+        display: none;
+    }
+}
+
+/* phone nav start */
+.nav{
+    display: none;
+    background-color: #B15C5C;
+    padding: 30.8px 0px 0px 36.5px;
+    position: absolute;
+    top: 0vh;
+    width: 100%;
+    z-index: 10;
+}
+@media screen and (min-width: 768px) {
+    .nav{
+        width: 34%;
+        right: 0;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .nav{
+        display: none;
+    }
+}
+.navSearchArea{
+    margin-bottom: 11.3px;
+}
+@media screen and (min-width: 768px) {
+    .navSearchArea > .navSearch{
+        display: none;
+    }
+    .login{
+        display: none;
+    }
+}
+
+.navSearchArea{
+    display: flex;
+}
+.navSearch{
+    display: flex;
+}
+.nav .navSearch input{
+    background-color: white;
+    padding: 4.5px 5px;
+    border: none;
+}
+.nav .navSearch button{
+    padding: 4px 5px;
+    background-color: white;
+}
+
+
+.navSearchArea img{
+    margin-left: 41.8px;
+    width: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .btnCancel{
+        margin-left: 0px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+
+
+.sidenavLanguage, .sidenav{
+    font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .sidenav{
+        display: none;
+    }
+}
+/* sidenav 語言列 */
+.sidenavLanguage > li{
+    margin-bottom: 14px;
+}
+ul.sidenavLanguage > li > ul{
+    margin-left: 37px;
+    margin-top: 12px;
+}
+ul.sidenavLanguage > li > ul > li{
+    display: inline;
+    font-size: 18px;
+    margin-right: 23px;
+}
+@media screen and (min-width: 768px) {
+    ul.sidenavLanguage > li > ul{
+        margin-left: 0px;
+        margin-top: 12px;
+    }
+    ul.sidenavLanguage > li > ul > li{
+        margin-right: 21px;
+    }
+}
+
+/* sidenav start */
+.sidenav > li{
+    margin-bottom: 14px;
+}
+/* sidenav icon */
+.sidenav > li::before, 
+.sidenavLanguage > li::before{
+    content: "．";
+    color: white;
+}
+@media screen and (min-width: 768px) {
+    .sidenavLanguage > li::before{
+        content: "";
+    }
+}
+/* sidenav end */
+
+/* 品牌列表 */
+.sideBrand{
+    font-size: 18px;
+    margin-left: 36.5px;
+}
+.sideBrand li{
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: white;
+}
+.sideBrand > li > ul > li{
+    margin-left: 25px;
+    margin-top: 8px;
+}
+
+.sideBrand > li > ul > li > a{
+    color: #FFC200;
+}
+/* 品牌icon start */
+.brandList{
+    position: relative;
+}
+.brandList::before{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f067";
+    font-size: 15px;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+}
+/* 品牌icon end */
+/* 品項icon start */
+.brandItem{
+    font-size: 18px;
+    position: relative;
+
+}
+.brandItem::before{
+    position: absolute;
+    top: 5px;
+    left: -15px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+    content: "\f068";
+    font-size: 10px;
+}
+/* 品項icon end */
+.sideBrand hr{
+    margin-bottom: 12px;
+    width: 70px;
+    border: white 1px solid;
+    position: relative;
+    left: -15px;
+}
+
+.active{
+    display: block;
+}
