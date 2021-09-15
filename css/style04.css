@@ -69,6 +69,7 @@ a:hover{
 #select-picture div img{
     width: 100%;
     opacity: 90%;
+    cursor: pointer;
 }
 .showStyle{
     opacity: 100%;
